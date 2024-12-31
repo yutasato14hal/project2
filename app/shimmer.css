@@ -1,0 +1,28 @@
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer-button {
+  background: linear-gradient(
+    90deg,
+    #00B900 0%,
+    #00B900 45%,
+    #2ed12e 50%,
+    #00B900 55%,
+    #00B900 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 8s infinite linear;
+  transition: all 0.3s ease;
+}
+
+.shimmer-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 185, 0, 0.2);
+}
+
