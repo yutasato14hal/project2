@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 
+// フォント設定
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -12,6 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+// メタデータ設定
 export const metadata: Metadata = {
   title:
     '【無料診断】年収300万台でもマイホームが買える! | 住宅ローンシミュレーション 独自の審査基準で夢のマイホームを実現',
