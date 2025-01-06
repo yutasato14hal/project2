@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /housing-loan-advice/
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /housing-loan-advice/index.html [L]

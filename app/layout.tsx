@@ -44,6 +44,59 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <head>
+        <meta name="title" content={String(metadata.title || '')} />
+        <meta name="description" content={String(metadata.description || '')} />
+
+        {/* keywordsが存在し、空でない場合のみmetaタグを追加 */}
+        {metadata.keywords && metadata.keywords.length > 0 && (
+          <meta
+            name="keywords"
+            content={
+              Array.isArray(metadata.keywords)
+                ? metadata.keywords.join(', ')
+                : ''
+            }
+          />
+        )}
+
+        {/* Favicon基本設定 */}
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+        {/* PNG形式のファビコン */}
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+
+        {/* Apple Touch Icon（iOS向け） */}
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+        {/* Android Chrome向けアイコン */}
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="/android-chrome-192x192.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="512x512"
+          href="/android-chrome-512x512.png"
+        />
+
+        {/* Web App Manifest */}
+        <link rel="manifest" href="/housing-loan-advice/manifest.json" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

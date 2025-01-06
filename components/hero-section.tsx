@@ -1,6 +1,6 @@
 "use client";
 import Image from 'next/image';
-import heroImage from '@/public/Image/kenjya-fv-pc.jpg';
+import heroImage from '@/public/images/kenjya-fv-pc.jpg';
 import { Button } from './ui/button';
 
 export function HeroSection() {

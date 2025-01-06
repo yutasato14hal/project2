@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+// export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  basePath: '/housing-loan-advice', // ベースパスを設定
+  output: 'export', // 静的エクスポートを使用
+  images: {
+    unoptimized: true,
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
